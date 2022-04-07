@@ -3,8 +3,9 @@
 <html>
 <head>
     <title>Supreme-EShop</title>
+    <%@include file="/common_css_js.jsp"%>
+
 </head>
-<%@include file="common_css_js.jsp"%>
 <body>
 <div class="circle7">
 

@@ -1,16 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Dell
-  Date: 03-04-2022
-  Time: 11:37 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Navbar</title>
-</head>
-<body>
 <div class="navbar">
     <div class="navleft">
         <ul class="navleftul">
@@ -44,6 +31,3 @@
 
     </div>
 </div>
-
-</body>
-</html>
