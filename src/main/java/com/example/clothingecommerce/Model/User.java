@@ -14,26 +14,18 @@ public class User {
     private String userEmail;
     @Column(length = 100,name = "user_password")
     private String userPassword;
-    @Column(length = 12,name = "user_phone")
-    private  String userPhone;
-    @Column(length = 1500,name = "user_address")
-    private  String userAddress;
 
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress) {
+    public User(int userId, String userName, String userEmail, String userPassword) {
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userAddress = userAddress;
     }
 
-    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress) {
+    public User(String userName, String userEmail, String userPassword) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userAddress = userAddress;
     }
 
     public User() {
@@ -69,21 +61,5 @@ public class User {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
-    }
-
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
     }
 }
