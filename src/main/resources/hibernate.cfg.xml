@@ -12,7 +12,7 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-        <mapping class="com.example.clothingecommerce.Model.User" />
-        <mapping class="com.example.clothingecommerce.Model.Product" />
+        <mapping class="project.Model.User" />
+        <mapping class="project.Model.Product" />
     </session-factory>
 </hibernate-configuration>

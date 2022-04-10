@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Supreme-EShop</title>
-    <%@include file="/common_css_js.jsp"%>
+    <%@include file="common_css_js.jsp"%>
 
 </head>
 <body>
