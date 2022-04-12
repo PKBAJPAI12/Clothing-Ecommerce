@@ -15,8 +15,8 @@ import java.io.PrintWriter;
 @WebServlet(name = "RegisterServlet", value = "/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try(PrintWriter out=response.getWriter()) {
+        response.setContentType("text/html");
+        try(PrintWriter out = response.getWriter()) {
 
             try{
                 String userName=request.getParameter("user_name");
@@ -26,7 +26,6 @@ public class RegisterServlet extends HttpServlet {
                 out.println(userEmail);
                 out.println(userPassword);
 
-
                 User user= new User(userName, userEmail, userPassword);
 
                 Session hibernateSession= FactoryProvider.getFactory().openSession();
@@ -35,8 +34,9 @@ public class RegisterServlet extends HttpServlet {
                 tx.commit();
                 hibernateSession.close();
 
-                out.println("Successfully Saved");
-                out.println("<br>+ User Id is "+ userId);
+                HttpSession httpSession= request.getSession();
+                httpSession.setAttribute("message","You have Successfully Created Account");
+                response.sendRedirect("register.jsp");
 
             }
             catch (Exception e){
