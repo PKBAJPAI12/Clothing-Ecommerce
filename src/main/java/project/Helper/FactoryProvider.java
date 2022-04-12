@@ -2,7 +2,7 @@ package project.Helper;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-
+//use FactoryProvider class for create connection between hibernate with registerServlet
 public class FactoryProvider {
     private static SessionFactory factory;
     public static SessionFactory getFactory(){
