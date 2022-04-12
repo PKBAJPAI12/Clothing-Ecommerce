@@ -32,7 +32,7 @@ if(user==null){
     return;
 }
 else{
-    httpSession.setAttribute("message","Welocme"+user.getUserName()+ "in Our EcommerceStore");
+    httpSession.setAttribute("message","Welocme "+user.getUserName()+ " in Our EcommerceStore");
     response.sendRedirect("Product.jsp");
     return;
 }
