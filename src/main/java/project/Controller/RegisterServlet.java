@@ -19,13 +19,12 @@ public class RegisterServlet extends HttpServlet {
         try(PrintWriter out = response.getWriter()) {
 
             try{
+                //get parameter from register.jsp by user input
                 String userName=request.getParameter("user_name");
                 String userEmail=request.getParameter("user_email");
                 String userPassword=request.getParameter("user_password");
-                out.println(userName);
-                out.println(userEmail);
-                out.println(userPassword);
 
+                // send parameter to User.java through User Constructor
                 User user= new User(userName, userEmail, userPassword);
 
                 Session hibernateSession= FactoryProvider.getFactory().openSession();
@@ -33,10 +32,11 @@ public class RegisterServlet extends HttpServlet {
                 int userId=(int) hibernateSession.save(user);
                 tx.commit();
                 hibernateSession.close();
-
+               //create httpsession for store value of hibernateSession in session
                 HttpSession httpSession= request.getSession();
                 httpSession.setAttribute("message","You have Successfully Created Account");
                 response.sendRedirect("register.jsp");
+                return;
 
             }
             catch (Exception e){

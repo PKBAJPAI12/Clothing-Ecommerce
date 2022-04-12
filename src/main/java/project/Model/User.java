@@ -15,6 +15,7 @@ public class User {
     @Column(length = 100,name = "user_password")
     private String userPassword;
 
+    // create constructor for getting parameter passed by RegisterServlet.java
     public User(int userId, String userName, String userEmail, String userPassword) {
         this.userId = userId;
         this.userName = userName;
@@ -30,7 +31,7 @@ public class User {
 
     public User() {
     }
-
+//use getter and setter for access private variable
     public int getUserId() {
         return userId;
     }
