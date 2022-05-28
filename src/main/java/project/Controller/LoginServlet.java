@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
                 //create httpsession for store value of hibernateSession in session
                 HttpSession httpSession= request.getSession();
 if(user==null){
-    httpSession.setAttribute("message","Invalid Details");
+      httpSession.setAttribute("message","Invalid Details");
     response.sendRedirect("login1.jsp");
     return;
 }

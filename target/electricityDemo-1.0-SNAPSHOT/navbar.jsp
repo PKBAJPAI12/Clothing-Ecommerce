@@ -1,3 +1,7 @@
+<%@ page import="project.Model.User" %>
+<%
+User user1=(User)session.getAttribute("current-user");
+%>
 <div class="navbar">
     <div class="navleft">
         <ul class="navleftul">
@@ -14,7 +18,90 @@
         <h2 class="">Superior</h2>
     </div>
     <div class="navright">
-        <img style="width: 2.8rem; margin-left: 0.5rem;" src="img/login-arrow.png" alt="" srcset="">
+
+        <ul>
+            <% if(user1==null)
+            {
+            %>
+
+            <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/login-arrow.png" alt="" srcset=""></li>
+            <li><a href="login1.jsp">Login</a> </li>
+            <%
+            } else if(user1.getUserId()==1)
+            {
+            %>
+
+            <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/logout-arrow.png" alt="" srcset=""></li>
+            <li><a href="">Logout</a> </li>
+            <li id="dashboard"><div class="circlenav">
+                <h1 style="text-align: center"><%=user1.getUserName().charAt(0)%></h1>
+            </div></li>
+            <div  style="background-color: white" class="dashboardnav">
+                <div style="display: flex; justify-content: center; margin-bottom: 0.5rem; margin-top: 0.5rem">
+                    <div style="width:3.2rem; height: 3.2rem;" class="circlenav">
+                        <h1 style="margin-top: 0.5rem; text-align: center"><%=user1.getUserName().charAt(0)%></h1>
+                    </div>
+                    <div style="margin-left: 0.5rem; display: flex; flex-direction: column; justify-content: center">
+                        <h2><%=user1.getUserName()%></h2>
+                        <p><%=user1.getUserEmail()%></p>
+                    </div>
+
+                </div>
+                <hr>
+                <div>
+                    <ul style="flex-direction: column;">
+                        <li><a href="">Products</a> </li>
+                        <li><a href="">Our Seller</a> </li>
+                        <li><a href="">Seller Requests</a> </li>
+                        <li><a href="">Complaints</a> </li>
+                        <li><a href="">Notifications</a> </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <%
+            } else {
+            %>
+
+            <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/logout-arrow.png" alt="" srcset=""></li>
+            <li><a href="">Logout</a> </li>
+            <li id="dashboard"><div class="circlenav">
+                <h1 style="text-align: center"><%=user1.getUserName().charAt(0)%></h1>
+            </div></li>
+            <div style="background-color: white" class="dashboardnav">
+                <div style="display: flex; justify-content: center; margin-top:0.5rem; margin-bottom:0.5rem">
+                    <div style="width:3.2rem; height: 3.2rem;" class="circlenav">
+                        <h1 style="text-align: center; margin-top:0.5rem"><%=user1.getUserName().charAt(0)%></h1>
+                    </div>
+                    <div style="margin-left: 0.5rem; display: flex; flex-direction: column; justify-content: center">
+                        <h2><%=user1.getUserName()%></h2>
+                        <p><%=user1.getUserEmail()%></p>
+                    </div>
+
+                </div>
+                <hr>
+                <div>
+                    <ul style="flex-direction: column;">
+                        <li><a href="">My Orders</a> </li>
+                        <li><a href="">MyCart</a> </li>
+                        <li><a href="">My Wishlist</a> </li>
+                        <li><a href="">Payment Methods</a> </li>
+                        <li><a href="">Notifications</a> </li>
+                        <li><a href="">Become Seller</a> </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <%            }
+            %>
+        </ul>
+
+
+
+
         <form style="display: flex;" action="TransactionServlet" method="post">
             <div style="margin-right:1rem" class="searchform">
                 <div  class="boximage">

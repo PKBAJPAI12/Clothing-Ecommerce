@@ -32,6 +32,19 @@ body{
     margin: auto;
     align-items: center;
 }
+.navright ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navright ul li{
+    font-size: 1rem;
+    color: blue;
+    padding: 0.5rem;
+}
+.navright ul li a{
+    text-decoration: none;
+}
 .navleft ul{
     display: flex;
     align-items: center;
@@ -40,7 +53,6 @@ body{
 }
 
 .navleft ul li{
-    padding: 0.5rem;
     list-style: none;
     font-size: 1rem;
     color: blue;
@@ -48,6 +60,20 @@ body{
 .navleft ul li a{
     text-decoration: none;
 }
+.dashboardnav{
+    width: 20rem;
+    height: 20rem;
+    border:1px solid gainsboro;
+    position: absolute;
+    top:5rem;
+    right:2%;
+}.circlenav{
+     border-radius: 50%;
+     background: linear-gradient(45deg,mediumvioletred,transparent);
+     width:2.5rem;
+     height: 2.5rem;
+     border:2px solid darkviolet
+ }
 .searchform{
     border: 1px solid grey;
     border-radius: 0.8rem;
@@ -141,7 +167,7 @@ body{
     margin-top: 1.2rem;
     margin-bottom: 1.3rem;
 }
-.leftsectionbtn input{
+/*.leftsectionbtn input{
     width: 10rem;
     padding: 0.6rem;
     border-top-left-radius: 6rem;
@@ -150,9 +176,20 @@ body{
     cursor: pointer;
     background: linear-gradient(rgb(10, 3, 53), rgb(27, 22, 59));
 
+    background: linear-gradient(45deg,red,pink);
+    color: white;
+}*/
+.leftsectionbtn1 input{
+    padding: 0.6rem;
+    border-top-left-radius: 6rem;
+    border-bottom-right-radius: 5rem;
+    cursor: pointer;
+    background: linear-gradient(rgb(10, 3, 53), rgb(27, 22, 59));
+
     /*background: linear-gradient(45deg,red,pink);*/
     color: white;
 }
+
 .leftsectionbtn{
     width: 10rem;
     padding: 0.6rem;
@@ -532,4 +569,31 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.collectionsection{
+    margin-bottom: 1.5rem;
+}
+.collectionsection label{
+    font-size: 0.9rem;
+}
+.categorysection{
+    margin-bottom: 1.5rem;
+
+}
+.categorysection label{
+    font-size: 0.9rem;
+}
+.pricesection{
+    margin-bottom: 1.5rem;
+
+}
+
+.pricesection label{
+    font-size: 0.9rem;
+
+}
+.labelsection{
+    margin-bottom: 0.7rem;
+}
+
 

@@ -13,70 +13,154 @@
 <%@include file="navbar.jsp"%>
 
 
-<div style="margin-top:0rem; flex-direction: column;" class="section">
-    <div style="margin: auto; display: flex;">
-        <h1 style="margin-right:1rem; font-size: 2.2rem; font-style: italic; font-family: cursive;">Top Brands </h1>
-        <img style="width: 3rem;" src="img/swirly-scribbled-arrow.png" alt="" srcset="">
-    </div>
-
-    <div class="brandproduct">
-        <div class="card">
-            <img style="width:20rem; height:15rem; border-top-left-radius: 2rem;" src="img/deal-page-467x316-levis1.jpg" alt="" srcset="">
-            <div class="offer">
-                <h1>Falt 15% Off on All Products</h1>
-            </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
-            </div>
-        </div>
-        <div class="card">
-            <img style="width:20rem; height:15rem; border-top-left-radius: 2rem;" src="img/2016-06-09.jpg" alt="">
-            <div class="offer">
-                <h1>Falt 25% Off on All Products</h1>
-            </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
-            </div>
-        </div>
-        <div class="card">
-            <img style="width:20rem; height:15rem; border-top-left-radius: 2rem;" src="img/jpg.jpg" alt="">
-            <div class="offer">
-                <h1>Falt 20% Off on All Products</h1>
-            </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
-            </div>
-        </div>
-        <div class="card">
-
-            <img style="width:20rem; height:15rem; border-top-left-radius: 2rem;" src="img/3302738.webp" alt="" srcset="">
-            <div class="offer">
-                <h1>Falt 18% Off on All Products</h1>
-            </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
-            </div>
-        </div>
-        <div class="card">
-            <img style="width:20rem; height:15rem; border-top-left-radius: 2rem;" src="img/images.jpg" alt="">
-            <div class="offer">
-                <h1>Falt 15% Off on All Products</h1>
-            </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
-            </div>
-        </div>
-        <div class="card">
-            <img style="width:20rem; height:15rem; border-top-left-radius: 2rem;" src="img/van-heusen-shirt-500x500.png" alt="">
-            <div class="offer">
-                <h1>Falt 25% Off on All Products</h1>
-            </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
-            </div>
-        </div>
-    </div>
+<div style="flex-direction: column;" class="section">
+<div style="margin: auto; display: flex;">
+    <h1 style="margin-right:1rem; font-size: 2.2rem; font-style: italic; font-family: cursive;">Top Brands </h1>
+    <img style="width: 3rem;" src="img/swirly-scribbled-arrow.png" alt="" srcset="">
 </div>
+
+<div style="display: flex; margin-top: 3rem;">
+    <div style="width:25%; margin-top:2rem;">
+        <div class="collectionsection">
+            <h1 style="margin-bottom: 0.7rem; font-size: 1.5rem;">Collections</h1>
+            <div class="labelsection">
+                <input type="checkbox" id="allcollection" name="allcategory" value="allcategory" Checked>
+                <label for="allcollection"> All Collections</label>
+            </div>
+            <div class="labelsection">
+                <input type="checkbox" id="men" name="men" value="men">
+                <label for="men"> Men's</label>
+            </div>
+            <div class="labelsection">
+                <input type="checkbox" id="women" name="women" value="women">
+                <label for="women"> Women's</label>
+            </div>
+            <div class="labelsection">
+                <input type="checkbox" id="kids" name="kids" value="kids">
+                <label for="kids">Kids </label>
+            </div>
+
+
+
+
+        </div>
+        <div class="categorysection">
+            <h1 style="margin-bottom: 0.7rem; font-size: 1.5rem;">Category</h1>
+
+            <div class="labelsection">
+                <input type="checkbox" id="allcategory" name="allcategory" value="allcategory" Checked>
+                <label for="allcategory"> All Category</label>
+            </div>
+            <div class="labelsection">
+                <input type="checkbox" id="casualwear" name="Casual Wear" value="casual">
+                <label for="casualwear">Casual</label>
+            </div>
+            <div class="labelsection">
+                <input type="checkbox" id="formalwear" name="Formal Wear" value="formal">
+                <label for="formalwear"> Formal</label>
+            </div>
+
+            <div class="lavelsection">
+                <input type="checkbox" id="sportswear" name="Sports Wear" value="sports">
+                <label for="sportswear">Sports </label>
+            </div>
+
+        </div>
+        <div class="pricesection">
+            <h1 style="margin-bottom: 0.7rem; font-size: 1.5rem;">Price</h1>
+            <div class="labelsection">
+                <input type="checkbox" id="low" name="low" value="low" Checked>
+                <label for="low"> Low to High</label>
+            </div>
+            <div class="labelsection">
+                <input type="checkbox" id="high" name="high" value="high">
+                <label for="high"> High to Low</label>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    <div style="width:75%; ">
+
+
+        <div class="brandproduct">
+            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;"
+                     src="img/deal-page-467x316-levis1.jpg" alt="" srcset="">
+                <div class="offer">
+                    <h3>Falt 15% Off on All Products</h3>
+                    <h2>$180</h2>
+                </div>
+                <div  class="leftsectionbtn1">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                </div>
+            </div>
+            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/2016-06-09.jpg"
+                     alt="">
+                <div class="offer">
+                    <h3>Falt 15% Off on All Products</h3>
+                    <h2>$180</h2>
+                </div>
+                <div class="leftsectionbtn1">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                </div>
+            </div>
+            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/jpg.jpg" alt="">
+                <div class="offer">
+                    <h3>Falt 15% Off on All Products</h3>
+                    <h2>$180</h2>
+                </div>
+                <div class="leftsectionbtn1">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                </div>
+            </div>
+            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
+
+                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/3302738.webp"
+                     alt="" srcset="">
+                <div class="offer">
+                    <h3>Falt 15% Off on All Products</h3>
+                    <h2>$180</h2>
+                </div>
+                <div class="leftsectionbtn1">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                </div>
+            </div>
+            <div style="width: 15rem; height:22rem;background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/images.jpg"
+                     alt="">
+                <div class="offer">
+                    <h3>Falt 15% Off on All Products</h3>
+                    <h2>$180</h2>
+                </div>
+                <div class="leftsectionbtn1">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                </div>
+            </div>
+            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;"
+                     src="img/van-heusen-shirt-500x500.png" alt="">
+                <div class="offer">
+                    <h3>Falt 15% Off on All Products</h3>
+                    <h2>$180</h2>
+                </div>
+                <div class="leftsectionbtn1">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
 <br>
 <br>
 <hr>
