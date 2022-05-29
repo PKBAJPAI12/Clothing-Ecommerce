@@ -11,14 +11,14 @@ public class SellerDao {
     public SellerDao(SessionFactory factory) {
         this.factory = factory;
     }
-    public Seller getSellerByEmailandPassword(String sellerEmail, String sellerPassword){
+    public Seller getSellerByIdandPassword(String sellerId, String sellerPassword){
         Seller seller=null;
 
         try{
-            String query="from Seller where sellerEmail=:e and sellerPassword=:p";
+            String query="from Seller where sellerId=:i and sellerPassword=:p";
             Session session=this.factory.openSession();
             Query q=session.createQuery(query);
-            q.setParameter("e",sellerEmail);
+            q.setParameter("i",sellerId);
             q.setParameter("p",sellerPassword);
             seller=(Seller)q.uniqueResult();
             session.close();

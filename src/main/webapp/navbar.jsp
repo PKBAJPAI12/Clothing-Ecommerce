@@ -1,7 +1,9 @@
 <%@ page import="project.Model.User" %>
+
 <%
 User user1=(User)session.getAttribute("current-user");
 %>
+
 <div class="navbar">
     <div class="navleft">
         <ul class="navleftul">
@@ -62,7 +64,9 @@ User user1=(User)session.getAttribute("current-user");
             </div>
 
             <%
-            } else {
+            }
+
+            else {
             %>
 
             <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/logout-arrow.png" alt="" srcset=""></li>
