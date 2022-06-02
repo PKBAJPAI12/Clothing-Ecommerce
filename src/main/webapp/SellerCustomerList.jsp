@@ -1,12 +1,8 @@
-<%@ page import="project.Dao.SellerDao" %>
-<%@ page import="project.Helper.FactoryProvider" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <title>Seller DashBoard-Supreme Clothing</title>
+    <title>Seller Customers-Supreme Clothing</title>
     <%@include file="common_css_js.jsp"%>
 
 </head>
@@ -53,89 +49,53 @@
 
     <div style="width:75%; ">
 
-        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center;">
-            <h1 style="margin-right:1rem; font-size: 2.2rem; font-style: italic; font-family: cursive;">Sells
-                Analytics </h1>
-            <img style="width: 3rem;" src="./img/swirly-scribbled-arrow.png" alt="" srcset="">
+        <div style="margin-bottom: 2.2rem; display: flex; justify-content: center;">
+            <h1 style="margin-right:1rem; font-size: 2.2rem; font-style: italic; font-family: cursive;">Customers </h1>
+            <img style="width: 3rem;" src="img/swirly-scribbled-arrow.png" alt="" srcset="">
         </div>
 
-        <div class="brandproduct">
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/income.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Net Income</h2>
+        <div style="margin:auto; width: 85%; margin-bottom: 1.5rem;">
+            <table style="background:linear-gradient(45deg, lightsteelblue, transparent); margin-top:1.5rem " class="ordertable">
+                <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Action</th>
 
-                </div>
-                <h1 style="font-size:2.4rem">$1615243</h1>
+                </tr>
+                </thead>
+                <tbody>
 
-            </div>
-            <div class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/sales.png"
-                         alt="">
+                <tr>
+                    <th class="val" scope="row" >1</th>
+                    <td>PK</td>
+                    <td>pk@gamail.com</td>
+                    <td >
+                        <a href="" style="font-size: 17px; text-decoration: none" class="link">View</a>
 
-                    <h2 style="font-size:1.8rem">Total Sales</h2>
+                    </td>
 
-                </div>
-                <h1 style="font-size:2.4rem">100</h1>
-
-
-
-            </div>
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/cancel.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Cancel Orders</h2>
-
-                </div>
-                <h1 style="font-size:2.4rem">20</h1>
-
-            </div>
-
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/box.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Total Products</h2>
-
-                </div>
-                <h1 style="font-size:2.4rem">300</h1>
-
-            </div>
-            <div class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/rating (1).png"
-                         alt="">
-
-                    <h2 style="font-size:1.8rem">Total Customer</h2>
-
-                </div>
-                <h1 style="font-size:2.4rem">200</h1>
+                </tr>
 
 
+                </tbody>
+            </table>
 
-            </div>
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/complaint.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Complaints</h2>
 
-                </div>
-                <h1 style="font-size:2.4rem">30</h1>
-
-            </div>
 
         </div>
+
+
+
+
     </div>
 
 </div>
 <hr>
 <div style="margin-bottom: 4rem; flex-flow: row wrap; justify-content: center;" class="section">
     <div class="cardfooter">
-        <img style="width: 4.5rem; margin: 0.4rem;" src="./img/truck.png" alt="" srcset="">
+        <img style="width: 4.5rem; margin: 0.4rem;" src="img/truck.png" alt="" srcset="">
         <div class="footerhead">
             <h3 style="font-size: 1.1rem;">FREE SHIPPING</h3>
             <p style="font-size: 0.9rem; margin-top: 0.3rem;">Order Above &#x20b9;499</p>
@@ -172,5 +132,21 @@
 </div>
 
 </body>
+<script>
 
+</script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

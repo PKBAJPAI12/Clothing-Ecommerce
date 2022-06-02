@@ -597,3 +597,72 @@ body{
 }
 
 
+.verticalnav{
+    margin-top: 3rem;
+    display:flex;
+    flex-direction: column;
+
+}
+.verticalnavele{
+    display: flex;
+    padding-left:3rem;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    border-bottom:1px solid pink;
+}
+.verticalnavele:hover{
+    background-color: pink;
+    border-right:0.5rem solid #E110E9;
+}
+.analyticbox{
+    width: 19rem;
+    height:12rem;
+    border:1px solid #E110E9;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background:linear-gradient(white,#F5F7F9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.analyticbox:hover{
+    opacity: 0.6;
+    background:linear-gradient(45deg,pink,white) ;
+    transform: scale(1.1);
+
+    transition: all 1s 1s ease-in-out;
+}
+
+.addproductform{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    align-items: center;
+    background-color: white;
+    border-top:2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 2rem ;
+    border-top-right-radius: 2rem;
+}
+.ordertable{
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+.ordertable th{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.ordertable td{
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+
+    text-align: center;
+
+}

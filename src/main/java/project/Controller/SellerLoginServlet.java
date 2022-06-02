@@ -29,7 +29,7 @@ public class SellerLoginServlet extends HttpServlet {
                     response.sendRedirect("SellerLogin.jsp");
                     return;
                 } else {
-                    httpSession.setAttribute("current-user", seller);
+                    httpSession.setAttribute("current-seller", seller);
                     response.sendRedirect("SellerDash.jsp");
                     return;
 

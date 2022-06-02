@@ -1,6 +1,6 @@
 <%@ page import="project.Model.Seller" %>
 <%
-    Seller seller1=(Seller)session.getAttribute("current-user");
+    Seller seller1=(Seller)session.getAttribute("current-seller");
 %>
 
 <div class="navbar">
@@ -36,33 +36,11 @@
             <li id="dashboard"><div class="circlenav">
                 <h1 style="text-align: center"><%=seller1.getSellerName().charAt(0)%></h1>
             </div></li>
-            <div  style="background-color: white" class="dashboardnav">
-                <div style="display: flex; justify-content: center; margin-bottom: 0.5rem; margin-top: 0.5rem">
-                    <div style="width:3.2rem; height: 3.2rem;" class="circlenav">
-                        <h1 style="margin-top: 0.5rem; text-align: center"><%=seller1.getSellerName().charAt(0)%></h1>
-                    </div>
-                    <div style="margin-left: 0.5rem; display: flex; flex-direction: column; justify-content: center">
-                        <h2><%=seller1.getSellerName()%></h2>
-                        <p><%=seller1.getSellerEmail()%></p>
-                    </div>
 
-                </div>
-                <hr>
-                <div>
-                    <ul style="flex-direction: column;">
-                        <li><a href="">Account Details</a> </li>
-                        <li><a href="">My Products</a> </li>
-                        <li><a href="">Order Requset</a> </li>
-                        <li><a href="">Product Complaints</a> </li>
-                        <li><a href="">Notifications</a> </li>
                         <%
                             }
                         %>
-                    </ul>
-                </div>
 
-
-            </div>
 
         </ul>
 
