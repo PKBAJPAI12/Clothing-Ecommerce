@@ -37,7 +37,6 @@ public class RegisterServlet extends HttpServlet {
                         httpSession.setAttribute("message","User Name First Letter should be Capital");
                         response.sendRedirect("register.jsp");
                         return;
-
                 }
                 else if(userEmail.length()==0){
                     httpSession.setAttribute("message","You are missing Email Please Enter Email");

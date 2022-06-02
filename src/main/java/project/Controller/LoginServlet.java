@@ -27,12 +27,17 @@ public class LoginServlet extends HttpServlet {
                 //create httpsession for store value of hibernateSession in session
                 HttpSession httpSession= request.getSession();
 if(user==null){
-    httpSession.setAttribute("message","Invalid Details");
+      httpSession.setAttribute("message","Invalid Details");
     response.sendRedirect("login1.jsp");
     return;
 }
 else{
-    httpSession.setAttribute("message","Welocme "+user.getUserName()+ " in Our EcommerceStore");
+    httpSession.setAttribute("current-user",user);
+
+    if(user.getUserId()==1){
+       response.sendRedirect("admin.jsp");
+    }
+    else
     response.sendRedirect("Product.jsp");
     return;
 }

@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="clothingcart@localhost" uuid="9b07ee7f-b625-41c5-8182-488f1aa25c15">
+    <data-source source="LOCAL" name="clothingcart@localhost" uuid="ecf7c8f9-14b5-4243-8440-25f37bb095be">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/clothingcart</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="META-INF:hibernate.cfg.xml/Hibernate" uuid="9e2cd0a9-8a74-4f02-813d-a225e971fd91">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-C:/Users/Dell/IdeaProjects/Clothing-Ecommerce/src/main/resources/META-INF/hibernate.cfg.xml</remarks>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/clothingcart</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
