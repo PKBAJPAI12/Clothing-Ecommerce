@@ -27,17 +27,17 @@ public class AddProductServlet extends HttpServlet {
                 Part part=request.getPart("product_image");
                 String pCollection=request.getParameter("collection_type");
                 String pCategory=request.getParameter("product_category");
-                Product p=new Product();
+
                 ProductDao pDao = new ProductDao(FactoryProvider.getFactory());
-
-
+                Product p=new Product(pName, pDesc, pQty, pPrice,pDiscount,pCollection,pCategory,part.getSubmittedFileName());
+                pDao.saveProduct(p);
                 String path=request.getRealPath("img")+ File.separator+"products"+File.separator+part.getSubmittedFileName();
                 System.out.println(path);
 
                 try {
                     //uploading code
                     FileOutputStream fos = new FileOutputStream(path);
-                    InputStream is = part.getInputStream();    //we have converted the data into into stream and converted into string
+                    InputStream is = part.getInputStream();    //we have converted the data into stream and converted into string
 
                     //reading data
                     byte[] data = new byte[is.available()];
