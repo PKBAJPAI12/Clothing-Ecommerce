@@ -571,20 +571,29 @@ body{
 }
 
 .collectionsection{
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
+.collectionsectionli{
+    list-style:none;
+    font-weight: 600;
+    font-size:1rem;
+    padding:0.7rem;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 1rem;
+}
+
 .collectionsection label{
     font-size: 0.9rem;
 }
 .categorysection{
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
 }
 .categorysection label{
     font-size: 0.9rem;
 }
 .pricesection{
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
 }
 
