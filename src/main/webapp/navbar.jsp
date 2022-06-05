@@ -107,13 +107,15 @@ User user1=(User)session.getAttribute("current-user");
 
 
         <form style="display: flex;" action="TransactionServlet" method="post">
-            <div style="margin-right:1rem" class="searchform">
+            <div style="margin-right:1rem;box-sizing: content-box;" class="searchform">
                 <div  class="boximage">
                     <img style="width:1.8rem" src="img/search.png" alt="" srcset="">
                 </div>
                 <input style="color:white; border-color: transparent; color:white "  type="text" placeholder="Search" name="trans">
-                <div style="border-left:1px solid black; padding-left:0.8rem " class="boximage">
-                    <img style="width:1.8rem" src="img/cart.png" alt="" srcset="">
+                <div style="border-left:1px solid black; padding-left:0.8rem;  display: flex " class="boximage">
+
+                    <a href="#" data-toggle="modal" data-target="#cart"><img style="width:1.8rem" src="img/cart.png" alt="" srcset=""></a>
+                    <span class="cart-items" style="font-size:20px"></span>
                 </div>
             </div>
 

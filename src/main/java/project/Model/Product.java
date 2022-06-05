@@ -22,7 +22,6 @@ public class Product {
     private String pCollection;
     @Column(length = 10,name = "product_pCategory")
     private String pCategory;
-    @Column(length = 10,name = "product_image")
     private String pImage;
 
     public Product(int id, String pName, String pDesc, int pQty, int pPrice, int pDiscount, String pCollection, String pCategory, String pImage) {
@@ -122,4 +121,9 @@ public class Product {
     public void setpImage(String pImage) {
         this.pImage = pImage;
     }
+    public int getPriceAfterApplyingDiscount(){
+        int d=(int)((this.getpDiscount()/100.0)*this.getpPrice());
+        return this.getpPrice()-d;
+    }
+
 }
