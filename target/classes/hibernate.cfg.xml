@@ -15,6 +15,11 @@
         <mapping class="project.Model.User" />
         <mapping class="project.Model.Product" />
         <mapping class="project.Model.Seller" />
+        <mapping class="project.Model.Address" />
+        <mapping class="project.Model.UserOrder" />
+        <mapping class="project.Model.Orders" />
+
+
 
     </session-factory>
 </hibernate-configuration>

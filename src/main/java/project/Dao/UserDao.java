@@ -72,4 +72,19 @@ public class UserDao {
         }
         return false;
     }
+    public User getUserById(int userId){
+        User user=null;
+        try {
+            Session session = this.factory.openSession();
+            user=session.get(User.class,userId);  //we now get the object of class category
+            session.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return user;
+    }
+    public int getUserIdByUser(User user){
+        return user.getUserId();
+    }
 }

@@ -1,6 +1,8 @@
 package project.Model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class User {
@@ -14,9 +16,6 @@ public class User {
     private String userEmail;
     @Column(length = 100,name = "user_password")
     private String userPassword;
-
-
-
     // create constructor for getting parameter passed by RegisterServlet.java
     public User(int userId, String userName, String userEmail, String userPassword) {
         this.userId = userId;

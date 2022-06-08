@@ -26,8 +26,8 @@
                 Tempore excepturi enim ea deleniti reprehenderit aspernatur! </h5>
 
         </div>
-        <div class="leftsectionbtn">
-            <input type="button" value="Shop Now">
+        <div>
+            <a style="text-decoration: none" href="Product.jsp"><input style="width: 9rem" class="newsectionbtn" type="button" value="Shop Now"></a>
         </div>
     </div>
     <div class="rightsection">
@@ -60,14 +60,14 @@
 
                 <img style="width:10rem; " src="img/model-gc65100ef7_640-removebg-preview.png" alt="">
                 <h3 style="text-align:center; margin-top:1rem; font-size: 1.1rem;">Men's Styles</h3>
-                <a style="color:silver; text-align:center; margin-top:0.7rem; font-size: 0.9rem; text-decoration: none; list-style: none;" href="">Shop Now >></a>
+                <a style="color:silver; text-align:center; margin-top:0.7rem; font-size: 0.9rem; text-decoration: none; list-style: none;" href="Product.jsp?collection=Mens">Shop Now >></a>
             </div>
         </div>
         <div class="card2">
             <div style=" height: 4rem;" class="col3">
                 <img style="width:10rem; " src="img/woman-gd23c17d79_640-removebg-preview.png" alt="">
                 <h3 style="text-align:center; margin-top:1rem; font-size: 1.1rem;">Women's Styles</h3>
-                <a style="color:silver; text-align:center; margin-top:0.7rem; font-size: 0.9rem; text-decoration: none; list-style: none;" href="">Shop Now >></a>
+                <a style="color:silver; text-align:center; margin-top:0.7rem; font-size: 0.9rem; text-decoration: none; list-style: none;" href="Product.jsp?collection=Womens">Shop Now >></a>
             </div>
         </div>
         <div class="card2">
@@ -75,7 +75,7 @@
 
                 <img style="width:10rem; " src="img/baby-gf1e0a29f3_640-removebg-preview.png" alt="">
                 <h3 style="text-align:center; margin-top:1rem; font-size: 1.1rem;">Kids's Styles</h3>
-                <a style="color:silver; text-align:center; margin-top:0.7rem; font-size: 0.9rem; text-decoration: none; list-style: none;" href="">Shop Now >></a>
+                <a style="color:silver; text-align:center; margin-top:0.7rem; font-size: 0.9rem; text-decoration: none; list-style: none;" href="Product.jsp?collection=Kids">Shop Now >></a>
             </div>
 
         </div>
@@ -113,8 +113,8 @@
             <div class="offer">
                 <h1>Falt 15% Off on All Products</h1>
             </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div >
+                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
             </div>
         </div>
         <div class="card">
@@ -122,8 +122,8 @@
             <div class="offer">
                 <h1>Falt 25% Off on All Products</h1>
             </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div class="newsectionbtn">
+                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
             </div>
         </div>
         <div class="card">
@@ -131,8 +131,8 @@
             <div class="offer">
                 <h1>Falt 20% Off on All Products</h1>
             </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div class="newsectionbtn">
+                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
             </div>
         </div>
         <div class="card">
@@ -141,8 +141,8 @@
             <div class="offer">
                 <h1>Falt 18% Off on All Products</h1>
             </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div class="newsectionbtn">
+                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
             </div>
         </div>
         <div class="card">
@@ -150,8 +150,8 @@
             <div class="offer">
                 <h1>Falt 15% Off on All Products</h1>
             </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div class="newsectionbtn">
+                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
             </div>
         </div>
         <div class="card">
@@ -159,8 +159,8 @@
             <div class="offer">
                 <h1>Falt 25% Off on All Products</h1>
             </div>
-            <div class="leftsectionbtn">
-                <input style="width: 20rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div class="newsectionbtn">
+                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
             </div>
         </div>
     </div>

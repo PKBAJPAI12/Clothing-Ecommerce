@@ -1,3 +1,7 @@
+<%@ page import="project.Helper.FactoryProvider" %>
+<%@ page import="project.Dao.ProductDao" %>
+<%@ page import="project.Model.Product" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -14,31 +18,17 @@
 
 
 <div style="flex-direction: column;" class="section">
-<div style="margin: auto; display: flex;">
-    <h1 style="margin-right:1rem; font-size: 2.2rem; font-style: italic; font-family: cursive;">Top Brands </h1>
-    <img style="width: 3rem;" src="img/swirly-scribbled-arrow.png" alt="" srcset="">
-</div>
 
 <div style="display: flex; margin-top: 3rem;">
     <div style="width:25%; margin-top:2rem;">
         <div class="collectionsection">
             <h1 style="margin-bottom: 0.7rem; font-size: 1.5rem;">Collections</h1>
-            <div class="labelsection">
-                <input type="checkbox" id="allcollection" name="allcategory" value="allcategory" Checked>
-                <label for="allcollection"> All Collections</label>
-            </div>
-            <div class="labelsection">
-                <input type="checkbox" id="men" name="men" value="men">
-                <label for="men"> Men's</label>
-            </div>
-            <div class="labelsection">
-                <input type="checkbox" id="women" name="women" value="women">
-                <label for="women"> Women's</label>
-            </div>
-            <div class="labelsection">
-                <input type="checkbox" id="kids" name="kids" value="kids">
-                <label for="kids">Kids </label>
-            </div>
+            <ul style="width:11rem">
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?collection=allcol">All Collection</a> </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?collection=Mens">Men's</a>  </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?collection=Womens">Women's</a> </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?collection=Kids">Kid's</a> </li>
+            </ul>
 
 
 
@@ -47,37 +37,20 @@
         <div class="categorysection">
             <h1 style="margin-bottom: 0.7rem; font-size: 1.5rem;">Category</h1>
 
-            <div class="labelsection">
-                <input type="checkbox" id="allcategory" name="allcategory" value="allcategory" Checked>
-                <label for="allcategory"> All Category</label>
-            </div>
-            <div class="labelsection">
-                <input type="checkbox" id="casualwear" name="Casual Wear" value="casual">
-                <label for="casualwear">Casual</label>
-            </div>
-            <div class="labelsection">
-                <input type="checkbox" id="formalwear" name="Formal Wear" value="formal">
-                <label for="formalwear"> Formal</label>
-            </div>
-
-            <div class="lavelsection">
-                <input type="checkbox" id="sportswear" name="Sports Wear" value="sports">
-                <label for="sportswear">Sports </label>
-            </div>
+            <ul style="width:11rem">
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?category=allcat">All Category</a> </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?category=Casual">Casual</a>  </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?category=Sports">Sports</a> </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?category=Formal">Formal</a> </li>
+            </ul>
 
         </div>
         <div class="pricesection">
             <h1 style="margin-bottom: 0.7rem; font-size: 1.5rem;">Price</h1>
-            <div class="labelsection">
-                <input type="checkbox" id="low" name="low" value="low" Checked>
-                <label for="low"> Low to High</label>
-            </div>
-            <div class="labelsection">
-                <input type="checkbox" id="high" name="high" value="high">
-                <label for="high"> High to Low</label>
-            </div>
-
-
+            <ul style="width:11rem">
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?price=low">Low to High</a>  </li>
+                <li class="collectionsectionli"><a style="text-decoration: none" href="Product.jsp?price=high">High to Low</a> </li>
+            </ul>
 
 
         </div>
@@ -86,74 +59,141 @@
 
     <div style="width:75%; ">
 
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center;">
+
+            <%
+                String cat = request.getParameter("category");
+                String col = request.getParameter("collection");
+
+                String price = request.getParameter("price");
+
+
+                // out.println(cat);
+                ProductDao dao = new ProductDao(FactoryProvider.getFactory());
+                // List<Product> list = dao.getAllProducts();
+                List<Product> list = null;
+                if (cat==null && col==null && price==null )
+                {
+                    list = dao.getAllProducts();
+                    %>
+                    <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">All Fashion Style </h1>
+            <%
+
+            }
+
+                else if (col==null && price==null && cat.trim().equals("allcat"))
+                {
+                    list = dao.getAllProducts();
+                    %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">All Fashion Style </h1>
+
+            <%
+                }
+                else if (cat==null && price==null && col.trim().equals("allcol"))
+                {
+                    list = dao.getAllProducts();
+                  %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">All Fashion Style </h1>
+<%
+            }
+
+                else if (col==null && price==null && cat.trim().equals("Casual"))
+                {
+                    list = dao.getProductsByCatName(cat.trim());
+                    %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Casual Clothes </h1>
+<%
+            }
+                else if (col==null && price==null && cat.trim().equals("Formal"))
+                {
+                    list = dao.getProductsByCatName(cat.trim());
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Formal Clothes </h1>
+
+            <%
+                }
+
+                else if (col==null && price==null && cat.trim().equals("Sports"))
+                {
+                    list = dao.getProductsByCatName(cat.trim());
+
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Sports Clothes </h1>
+
+<%
+            }
+
+                else if (cat==null && price==null && col.trim().equals("Mens"))
+                {
+                    list = dao.getProductsByColName(col.trim());
+
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Men's Collection </h1>
+
+            <%
+            }
+                else if (cat==null && price==null && col.trim().equals("Womens"))
+                {
+                    list = dao.getProductsByColName(col.trim());
+
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Women's Collection </h1>
+
+            <%
+            }
+                else if (cat==null && price==null && col.trim().equals("Kids"))
+                {
+                    list = dao.getProductsByColName(col.trim());
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Kid's Collection</h1>
+
+            <%
+            }
+                else if (cat==null && col==null && price.trim().equals("low"))
+                {
+                    list = dao.getProductsByLowPrice();
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">Low to High Price</h1>
+
+            <%
+            }
+                else if (cat==null && col==null && price.trim().equals("high"))
+                {
+                    list = dao.getProductsByHighPrice();
+            %>
+            <h1 style="margin-right:1rem; font-size: 1.5rem; font-style: italic; font-family: cursive;">High to Low Price </h1>
+<%
+            }
+            %>
+
+
+
+        </div>
 
         <div class="brandproduct">
-            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
-                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;"
-                     src="img/deal-page-467x316-levis1.jpg" alt="" srcset="">
+            <%
+                for (Product p:list){
+            %>
+            <div style="width: 15rem; height:20rem; background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:13rem; border-top-left-radius: 2rem;"
+                     src="img/<%=p.getpImage()%>" alt="" srcset="">
                 <div class="offer">
-                    <h3>Falt 15% Off on All Products</h3>
-                    <h2>$180</h2>
+                    <h3 style="font-size: 1.3rem"><%=p.getpName()%></h3>
+                    <div style="display: flex; justify-content: center; align-items: flex-end">
+                        <p style="font-size:0.6rem">Flat <%=p.getpDiscount()%>% Off</p>
+                        <h2>RS.<%=p.getpPrice()%></h2>
+                    </div>
+                    <h2>RS.<%=p.getPriceAfterApplyingDiscount()%></h2>
+
+
                 </div>
                 <div  class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" onclick="add_to_cart(<%=p.getId()%>,'<%=p.getpName()%>','<%=p.getPriceAfterApplyingDiscount()%>','<%=p.getpImage()%>')" value="Add to Cart">
                 </div>
             </div>
-            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
-                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/2016-06-09.jpg"
-                     alt="">
-                <div class="offer">
-                    <h3>Falt 15% Off on All Products</h3>
-                    <h2>$180</h2>
-                </div>
-                <div class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
-                </div>
-            </div>
-            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
-                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/jpg.jpg" alt="">
-                <div class="offer">
-                    <h3>Falt 15% Off on All Products</h3>
-                    <h2>$180</h2>
-                </div>
-                <div class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
-                </div>
-            </div>
-            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
-
-                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/3302738.webp"
-                     alt="" srcset="">
-                <div class="offer">
-                    <h3>Falt 15% Off on All Products</h3>
-                    <h2>$180</h2>
-                </div>
-                <div class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
-                </div>
-            </div>
-            <div style="width: 15rem; height:22rem;background:linear-gradient(white,#F5F7F9)" class="card">
-                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;" src="img/images.jpg"
-                     alt="">
-                <div class="offer">
-                    <h3>Falt 15% Off on All Products</h3>
-                    <h2>$180</h2>
-                </div>
-                <div class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
-                </div>
-            </div>
-            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
-                <img style="width:15rem; height:18rem; border-top-left-radius: 2rem;"
-                     src="img/van-heusen-shirt-500x500.png" alt="">
-                <div class="offer">
-                    <h3>Falt 15% Off on All Products</h3>
-                    <h2>$180</h2>
-                </div>
-                <div class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" value="Add to Cart">
-                </div>
-            </div>
+            <%
+                }
+            %>
         </div>
     </div>
 
