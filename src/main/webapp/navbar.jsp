@@ -9,7 +9,7 @@ User user1=(User)session.getAttribute("current-user");
         <ul class="navleftul">
             <li style="padding-right: 0rem;"><img  style="width: 2.5rem;" src="img/home (3).png" alt="" srcset=""></li>
             <li style="padding-left: 0.1rem;"><a href="index.jsp">Home</a> </li>
-            <li><a href="newCollection.jsp">New Collection</a></li>
+            <li><a href="Product.jsp">Collections</a></li>
             <li><a href="Product.jsp?collection=Mens">Men</a> </li>
             <li><a href="Product.jsp?collection=Womens">Women</a> </li>
             <li><a href="Product.jsp?collection=Kids">Kids</a> </li>

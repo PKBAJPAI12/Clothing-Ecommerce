@@ -26,7 +26,7 @@
                 {
             %>
             <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/login-arrow.png" alt="" srcset=""></li>
-            <li><a href="login1.jsp">Login</a> </li>
+            <li><a href="SellerLogin.jsp">Login</a> </li>
             <%
                 } else
                 {

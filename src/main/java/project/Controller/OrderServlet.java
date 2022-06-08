@@ -28,6 +28,7 @@ public class OrderServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // 1. get received JSON data from request
+
         BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
         String json = "";
         if(br != null){

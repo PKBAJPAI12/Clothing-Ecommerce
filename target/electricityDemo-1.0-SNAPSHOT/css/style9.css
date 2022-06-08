@@ -56,6 +56,7 @@ body{
     list-style: none;
     font-size: 1rem;
     color: blue;
+    padding-left:0.5rem ;
 }
 .navleft ul li a{
     text-decoration: none;
@@ -674,4 +675,11 @@ body{
 
     text-align: center;
 
+}
+.newsectionbtn{
+    color: white;
+    background: linear-gradient(rgb(10, 3, 53), rgb(27, 22, 59));
+    padding: 0.5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }

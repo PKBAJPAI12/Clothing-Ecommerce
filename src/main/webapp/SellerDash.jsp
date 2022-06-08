@@ -14,6 +14,17 @@
 <body>
 <%@include file="navbarseller.jsp"%>
 
+<%
+    Seller seller=(Seller) session.getAttribute("current-seller");
+
+    if(seller==null){
+        session.setAttribute("message","You are not logged in");
+        response.sendRedirect("SellerLogin.jsp");
+        return;
+
+    }
+
+%>
 
 <div style="margin-top:1.5rem ; margin-left: 0rem; margin-right: 1.5rem;"  class="section">
     <div style="width:25%; background-color:white; border-top-right-radius: 5rem; margin-right:2rem; border-top:2px solid #E110E9; border-right:1px solid #E110E9;">
@@ -40,11 +51,6 @@
             <div class="verticalnavele">
                 <img style="width: 2.5rem; margin-right: 1rem;" src="img/customer.png" alt="" srcset="">
                 <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Customers</a></h4>
-
-            </div>
-            <div class="verticalnavele">
-                <img style="width: 2.5rem;  margin-right: 1rem;" src="img/feedback.png" alt="" srcset="">
-                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Complaints</a></h4>
 
             </div>
 

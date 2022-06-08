@@ -1,4 +1,4 @@
-function add_to_cart(pid,pname,price){
+function add_to_cart(pid,pname,price,pimage){
     let cart=localStorage.getItem("cart");
     if(cart==null){
         //no cart yet
@@ -7,11 +7,14 @@ function add_to_cart(pid,pname,price){
             productId:pid,
             productName:pname,
             productQuantity: 1,
+            productImage:pimage,
             productPrice:price
+
         }
         products.push(product);
         localStorage.setItem("cart",JSON.stringify(products));
         console.log("Product is added for the first time")
+        console.log(productImage);
     }
     else {
         //cart is already present
@@ -34,7 +37,8 @@ function add_to_cart(pid,pname,price){
                 productId:pid,
                 productName:pname,
                 productQuantity: 1,
-                productPrice:price
+                productPrice:price,
+                productImage:pimage
             }
             pcart.push(product);
             // updates the cart
@@ -49,48 +53,76 @@ function add_to_cart(pid,pname,price){
 function updateCart(){
     let cartString=localStorage.getItem("cart");
     let cart=JSON.parse(cartString);
+
     if(cart==null || cart.length===0){
         console.log("Cart is Empty!!");
-        $(".cart-items").html("(0)");   //we inject the html using jquery to html if the cart is empty
+        $(".cart-items").html("0");   //we inject the html using jquery to html if the cart is empty
         $(".cart-body").html("<h3>Cart does not have any items</h3>");
         disableButton()
     }else
     {
         //there is something in cart to show
-        $(".cart-items").html(`(${cart.length})`);   //we inject the html using jquery to html if the cart is empty
-        let table=`
-        <table class="table">
-        <thead class="thead-light">
-        <tr>
-        <th>Item Name</th>
-        <th>Item Price</th>
-        <th>Item Quantity</th>
-        <th>Item Total Price</th>
-        <th>Action</th>
-        </tr>
-        </thead>
-        `;
+        $(".cart-items").html(`${cart.length}`);   //we inject the html using jquery to html if the cart is empty
+
+    let table=`<table style="background-color: white; margin-top:1.5rem; width:100% "
+               className="ordertable">
+            <thead>
+            <tr>
+                <th style="font-size: 1.3rem; padding: 0.8rem" scope="col">Product</th>
+                <th style="font-size: 1.3rem; padding: 0.8rem" scope="col">Product Name</th>
+                <th style="font-size: 1.3rem; padding: 0.8rem" scope="col">Product Price</th>
+                <th style="font-size: 1.3rem; padding: 0.8rem" scope="col">Quantity</th>
+                <th style="font-size: 1.3rem; padding: 0.8rem" scope="col">Price</th>
+                <th style="font-size: 1.3rem; padding: 0.8rem" scope="col">Action</th>
+
+            </tr>
+            </thead>
+            `;
+        let subTotalPrice=0;
         let totalPrice=0;
+        let gst=0;
         //for every item of cart
         cart.map((item)=>{
             table+=`
-            <tr>
-            <td>${item.productName}</td>
-            <td>${item.productPrice}</td>
-            <td>${item.productQuantity}</td>
-            <td>${item.productQuantity*item.productPrice}</td>
-            <td><button onclick="deleteItemFromCart(${item.productId})" class="btn btn-danger btn-sm">Remove</button></button></td>
-            </tr>
-            `
-            totalPrice+=item.productPrice*item.productQuantity;
+            <tr style="background: linear-gradient(45deg,rgb(224, 197, 215),transparent)">
+            <td style="display: flex; justify-content: center"><img style="width:5rem; margin-top: 1rem;" src="img/${item.productImage}"  srcset=""></td>
+                <td style="font-size: 1.1rem; text-align: center">${item.productName}</td>
+            <td style="font-size: 1.1rem; text-align: center">${item.productPrice}</td>
+            <td style="font-size: 1.1rem; text-align: center">${item.productQuantity}</td>
+            <td style="font-size: 1.1rem; text-align: center">${item.productQuantity*item.productPrice}</td>
+            <td style="display: flex; justify-content: center; padding-bottom: 1.5rem"><button style="padding: 0.5rem; border-radius: 0.7rem; color: blue; background: linear-gradient(45deg,red,white)" onclick="deleteItemFromCart(${item.productId})" class="">Remove</button></td>
+          
+            </tr>`
+            subTotalPrice+=item.productPrice*item.productQuantity;
+            gst=(subTotalPrice*18)/100;
+            totalPrice=subTotalPrice+gst+100;
         })
         table=table+`
                    <tr>
-                   <td colspan="5" class="text-right font-weight-bold m-5">
-                   Total Price: ${totalPrice}
+                   <td style="font-size: 1.3rem" colspan="5" class="text-right font-weight-bold m-5">
+                   Sub Total Price: RS.${subTotalPrice}
                     </td>
                     </tr> 
-                    </table>`
+                    <tr>
+                   <td style="font-size: 1.3rem" colspan="5" class="text-right font-weight-bold m-5">
+                   GST: RS.${gst}
+                    </td>
+                    </tr>
+                    
+                    <tr>
+                   <td style="font-size: 1.3rem" colspan="5" class="text-right font-weight-bold m-5">
+                   Delivery Charge: RS.100
+                    </td>
+                    </tr>
+                    <tr>
+                   <td style="font-size: 1.3rem" colspan="5" class="text-right font-weight-bold m-5">
+                   Total Price: RS.${totalPrice}
+                    </td>
+                    </tr>
+        </table>`
+
+
+
         $(".cart-body").html(table);
         enableButton()
         // return table;
@@ -123,7 +155,7 @@ function enableButton() {
 }
 
 //first request to server to create order
-function paymentStart(){
+/*function paymentStart(){
     console.log("Payment Started..");
     let amount=$("#payment_field").val();
     console.log(amount);
@@ -154,24 +186,25 @@ function paymentStart(){
         }
     )
 }
-
+*/
 
 function orderNow() {
+
     let cartString = localStorage.getItem("cart");
+
     let cart = JSON.parse(cartString);
-    // console.log(cart)
+
     $.ajax(
         {
-            url:'OrderServlet',
-            data:JSON.stringify(cart),
-            contentType: 'application/json',
             type:'POST',
+            data:JSON.stringify(cart),
+            url:'OrderServlet',
+            contentType: 'application/json',
             data_type:'json',
             success:function(data){
                 //invokes when success
-                // console.log(data)
-                // alert("Yes")
-                // window.location="index.jsp"
+                alert("Yes")
+                //window.location="index.jsp"
                 $(".card-body").hide()
                 $(".getOrderData").html("<h3>Your Order is Successfully ordered you will recieve" +
                     " your order within 7 days</h3>")
