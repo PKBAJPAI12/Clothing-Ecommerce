@@ -10,7 +10,17 @@
 <body>
 
 <%@include file="navbarseller.jsp"%>
+<%
+    Seller seller=(Seller) session.getAttribute("current-seller");
 
+    if(seller==null){
+        session.setAttribute("message","You are not logged in");
+        response.sendRedirect("SellerLogin.jsp");
+        return;
+
+    }
+
+%>
 <div style="margin-top:1.5rem ; margin-left: 0rem; margin-right: 1.5rem;"  class="section">
     <div style="width:25%; background-color:white; border-top-right-radius: 5rem; margin-right:2rem; border-top:2px solid #E110E9; border-right:1px solid #E110E9;">
         <div class="verticalnav" >
