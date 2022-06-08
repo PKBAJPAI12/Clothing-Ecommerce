@@ -174,16 +174,21 @@
             <%
                 for (Product p:list){
             %>
-            <div style="width: 15rem; height:22rem; background:linear-gradient(white,#F5F7F9)" class="card">
-                <img style="width:15rem; height:15rem; border-top-left-radius: 2rem;"
+            <div style="width: 15rem; height:20rem; background:linear-gradient(white,#F5F7F9)" class="card">
+                <img style="width:15rem; height:13rem; border-top-left-radius: 2rem;"
                      src="img/<%=p.getpImage()%>" alt="" srcset="">
                 <div class="offer">
-                    <h3><%=p.getpName()%></h3>
-                    <p style="font-size:0.6rem">Flat <%=p.getpDiscount()%>% Off</p>
-                    <h2>RS.<%=p.getpPrice()%></h2>
+                    <h3 style="font-size: 1.3rem"><%=p.getpName()%></h3>
+                    <div style="display: flex; justify-content: center; align-items: flex-end">
+                        <p style="font-size:0.6rem">Flat <%=p.getpDiscount()%>% Off</p>
+                        <h2>RS.<%=p.getpPrice()%></h2>
+                    </div>
+                    <h2>RS.<%=p.getPriceAfterApplyingDiscount()%></h2>
+
+
                 </div>
                 <div  class="leftsectionbtn1">
-                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" onclick="add_to_cart(<%=p.getId()%>,'<%=p.getpName()%>',<%=p.getPriceAfterApplyingDiscount()%>)" value="Add to Cart">
+                    <input style="width: 15rem; border-top-right-radius: 0rem; " type="button" onclick="add_to_cart(<%=p.getId()%>,'<%=p.getpName()%>','<%=p.getPriceAfterApplyingDiscount()%>','<%=p.getpImage()%>')" value="Add to Cart">
                 </div>
             </div>
             <%
@@ -235,7 +240,6 @@
 
     <p style="text-align: center; font-size: 1rem; padding-top: 0.6rem;">&#169; 2022 Superior Clothing Brand All Right Reserved</p>
 </div>
-<%@include file="common_modals.jsp"%>
 
 </body>
 </html>
