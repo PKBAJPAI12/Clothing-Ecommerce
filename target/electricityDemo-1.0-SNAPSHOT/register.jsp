@@ -34,21 +34,21 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="img/user (2).png" alt="" srcset="">
                     <label>Name</label>
                 </div>
-                <input style="color:white;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_name" type="text" class="form-control" placeholder="Enter Name">
+                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_name" type="text" class="form-control" placeholder="Enter Name">
             </div>
             <div class="formcol">
                 <div class="formlevel">
                     <img style="width: 2rem; margin-right:1rem ;" src="img/email.png" alt="" srcset="">
                     <label>Email Address</label>
                 </div>
-                <input style="color:white;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_email" type="email" class="form-control" placeholder="Enter email">
+                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_email" type="email" class="form-control" placeholder="Enter email">
             </div>
             <div class="formcol">
                 <div class="formlevel">
                     <img style="width: 2rem; margin-right:1rem ;" src="img/lock (1).png" alt="" srcset="">
                     <label>Password</label>
                 </div>
-                <input style="color:white;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" class="form-control" placeholder="Enter Password">
+                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" class="form-control" placeholder="Enter Password">
             </div>
             <div class="formsectionbtn">
                 <button type="submit" class="leftsectionbtn" style="margin-right:1rem ;" >
