@@ -36,14 +36,14 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/email.png" alt="" srcset="">
                     <label>Seller Id</label>
                 </div>
-                <input style="color:white;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_id" type="text" class="form-control" placeholder="Enter Seller Id">
+                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_id" type="text" class="form-control" placeholder="Enter Seller Id">
             </div>
             <div class="formcol">
                 <div class="formlevel">
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/lock (1).png" alt="" srcset="">
                     <label>Password</label>
                 </div>
-                <input style="color:white;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_password" type="password" class="form-control" placeholder="Enter Password">
+                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_password" type="password" class="form-control" placeholder="Enter Password">
             </div>
             <div class="formsectionbtn">
                 <button type="submit" class="leftsectionbtn" style="margin-right:1rem ;" >
@@ -61,7 +61,7 @@
                     Reset
                 </button>
             </div>
-            <h3 style="margin-top: 1.5rem;">Please <a style="text-decoration:none; " href="register.jsp"><strong style="color:red">Sign Up Now!</strong></a> If you are First Time User</h3>
+            <h3 style="margin-top: 1.5rem;">Please <a style="text-decoration:none; " href="sellerregister.jsp"><strong style="color:red">Sign Up Now!</strong></a> If you are First Time User</h3>
         </form>
 
     </div>
