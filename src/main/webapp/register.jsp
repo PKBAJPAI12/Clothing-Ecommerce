@@ -27,7 +27,7 @@
             <h1 style="font-size:1.9rem; margin:auto">Sign Up</h1>
         </div>
 
-<%@include file="message.jsp" %>
+        <%@include file="message.jsp" %>
         <form style="width: 75%;" action="RegisterServlet" method="post">
             <div class="formcol">
                 <div class="formlevel">
