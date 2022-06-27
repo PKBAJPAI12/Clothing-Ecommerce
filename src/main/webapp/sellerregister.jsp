@@ -24,13 +24,13 @@
         <form style="width: 75%;" action="SellerRegisterServlet" method="post">
             <div style="display: flex" class="formrows" >
 
-            <div style="width: 40%; margin: auto;" class="formcol">
-                <div class="formlevel">
-                    <img style="width: 2rem; margin-right:1rem ;" src="img/user (2).png" alt="" srcset="">
-                    <label>Name</label>
+                <div style="width: 40%; margin: auto;" class="formcol">
+                    <div class="formlevel">
+                        <img style="width: 2rem; margin-right:1rem ;" src="img/user (2).png" alt="" srcset="">
+                        <label>Name</label>
+                    </div>
+                    <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_name" type="text" class="form-control" placeholder="Enter Name">
                 </div>
-                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_name" type="text" class="form-control" placeholder="Enter Name">
-            </div>
 
                 <div style="width: 40%; margin: auto;" class="formcol">
                     <div class="formlevel">
@@ -42,23 +42,23 @@
             </div>
             <div class="formrows" >
 
-            <div style="width: 90%; margin: auto;" class="formcol">
-                <div class="formlevel">
-                    <img style="width: 2rem; margin-right:1rem ;" src="img/email.png" alt="" srcset="">
-                    <label>Email Address</label>
+                <div style="width: 90%; margin: auto;" class="formcol">
+                    <div class="formlevel">
+                        <img style="width: 2rem; margin-right:1rem ;" src="img/email.png" alt="" srcset="">
+                        <label>Email Address</label>
+                    </div>
+                    <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_email" type="email" class="form-control" placeholder="Enter email">
                 </div>
-                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="seller_email" type="email" class="form-control" placeholder="Enter email">
-            </div>
             </div>
             <div style="display: flex" class="formrows" >
 
-            <div style="width: 40%; margin: auto;" class="formcol">
-                <div class="formlevel">
-                    <img style="width: 2rem; margin-right:1rem ;" src="img/email.png" alt="" srcset="">
-                    <label>GST Number</label>
+                <div style="width: 40%; margin: auto;" class="formcol">
+                    <div class="formlevel">
+                        <img style="width: 2rem; margin-right:1rem ;" src="img/email.png" alt="" srcset="">
+                        <label>GST Number</label>
+                    </div>
+                    <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="gst_no" type="text" class="form-control" placeholder="Enter GST Number">
                 </div>
-                <input style="color:black;padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="gst_no" type="text" class="form-control" placeholder="Enter GST Number">
-            </div>
                 <div style="width: 40%; margin: auto;" class="formcol">
                     <div class="formlevel">
                         <img style="width: 2rem; margin-right:1rem ;" src="img/lock (1).png" alt="" srcset="">
