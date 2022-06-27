@@ -114,7 +114,7 @@
                 <h1>Falt 15% Off on All Products</h1>
             </div>
             <div >
-                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+                <a style="text-decoration: none" href="Product.jsp"></a>    <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now"></a>
             </div>
         </div>
         <div class="card">
@@ -122,8 +122,8 @@
             <div class="offer">
                 <h1>Falt 25% Off on All Products</h1>
             </div>
-            <div class="newsectionbtn">
-                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div >
+                <a style="text-decoration: none" href="Product.jsp"></a>    <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now"></a>
             </div>
         </div>
         <div class="card">
@@ -131,8 +131,8 @@
             <div class="offer">
                 <h1>Falt 20% Off on All Products</h1>
             </div>
-            <div class="newsectionbtn">
-                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div >
+                <a style="text-decoration: none" href="Product.jsp"></a>    <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now"></a>
             </div>
         </div>
         <div class="card">
@@ -141,8 +141,8 @@
             <div class="offer">
                 <h1>Falt 18% Off on All Products</h1>
             </div>
-            <div class="newsectionbtn">
-                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div >
+                <a style="text-decoration: none" href="Product.jsp"></a>    <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now"></a>
             </div>
         </div>
         <div class="card">
@@ -150,8 +150,8 @@
             <div class="offer">
                 <h1>Falt 15% Off on All Products</h1>
             </div>
-            <div class="newsectionbtn">
-                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div >
+                <a style="text-decoration: none" href="Product.jsp"></a>    <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now"></a>
             </div>
         </div>
         <div class="card">
@@ -159,8 +159,8 @@
             <div class="offer">
                 <h1>Falt 25% Off on All Products</h1>
             </div>
-            <div class="newsectionbtn">
-                <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now">
+            <div >
+                <a style="text-decoration: none" href="Product.jsp"></a>    <input class="newsectionbtn" style="width: 20rem;padding: 0.6rem; border-top-right-radius: 0rem;" type="button" value="Shop Now"></a>
             </div>
         </div>
     </div>
