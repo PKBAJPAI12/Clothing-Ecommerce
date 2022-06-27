@@ -1,7 +1,7 @@
 <%@ page import="project.Model.User" %>
 
 <%
-User user1=(User)session.getAttribute("current-user");
+    User user1=(User)session.getAttribute("current-user");
 %>
 
 <div class="navbar">
@@ -31,7 +31,7 @@ User user1=(User)session.getAttribute("current-user");
 
 
 
-                    <%
+            <%
             } else if(user1.getUserId()==1)
             {
             %>
@@ -41,7 +41,7 @@ User user1=(User)session.getAttribute("current-user");
             <li id="dashboard"><div class="circlenav">
                 <h1 style="text-align: center"><%=user1.getUserName().charAt(0)%></h1>
             </div></li>
-          <!--  <div  style="background-color: white" class="dashboardnav">
+            <!--  <div  style="background-color: white" class="dashboardnav">
                 <div style="display: flex; justify-content: center; margin-bottom: 0.5rem; margin-top: 0.5rem">
                     <div style="width:3.2rem; height: 3.2rem;" class="circlenav">
                         <h1 style="margin-top: 0.5rem; text-align: center"><%=user1.getUserName().charAt(0)%></h1>
@@ -66,7 +66,7 @@ User user1=(User)session.getAttribute("current-user");
 
             </div>-->
 
-                    <%
+            <%
             }
 
             else {
@@ -101,8 +101,8 @@ User user1=(User)session.getAttribute("current-user");
                 </div>
 
             </div>
-        <%            }
-        %>
+            <%            }
+            %>
 
         </ul>
 
