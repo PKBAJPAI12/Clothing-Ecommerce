@@ -2,9 +2,12 @@ package project.Dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import project.Model.Product;
 import project.Model.User;
 
 import org.hibernate.query.*;
+
+import java.util.List;
 
 public class UserDao {
     private SessionFactory factory;
@@ -87,4 +90,13 @@ public class UserDao {
     public int getUserIdByUser(User user){
         return user.getUserId();
     }
+
+    public List<User> getAllUsers(){
+        Session s = this.factory.openSession();
+        Query query = s.createQuery("FROM User ");
+        List<User> list=query.list();
+        return list;
+
+    }
+
 }
