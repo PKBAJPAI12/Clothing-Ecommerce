@@ -28,8 +28,8 @@
             <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/login-arrow.png" alt="" srcset=""></li>
             <li><a href="SellerLogin.jsp">Login</a> </li>
             <%
-                } else
-                {
+            } else
+            {
             %>
             <li><img  style="width: 2.5rem; margin-left: 0.5rem;" src="img/logout-arrow.png" alt="" srcset=""></li>
             <li><a href="">Logout</a> </li>
@@ -37,9 +37,9 @@
                 <h1 style="text-align: center"><%=seller1.getSellerName().charAt(0)%></h1>
             </div></li>
 
-                        <%
-                            }
-                        %>
+            <%
+                }
+            %>
 
 
         </ul>
