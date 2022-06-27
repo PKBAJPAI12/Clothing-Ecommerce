@@ -10,7 +10,6 @@
 
 <body>
 <%@include file="navbarseller.jsp"%>
-<%@include file="message.jsp"%>
 <%
   Seller seller=(Seller) session.getAttribute("current-seller");
 
@@ -27,37 +26,31 @@
     <div class="verticalnav" >
       <div style="border-top-right-radius: 1.1rem;" class="verticalnavele">
         <img style="width: 2.5rem; margin-right: 1rem;" src="img/dashboard.png" alt="" srcset="">
-        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Dashboard</a></h4>
+        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="#">Dashboard</a></h4>
       </div>
       <div class="verticalnavele" >
         <img style="width: 2.5rem;  margin-right: 1rem;" src="img/orders.png" alt="" srcset="">
-        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Orders</a></h4>
+        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="sellerOrder.jsp">Orders</a></h4>
 
       </div>
       <div class="verticalnavele">
         <img style="width: 2.5rem; margin-right: 1rem;" src="img/product (1).png" alt="" srcset="">
-        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Products</a></h4>
+        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="sellerProduct.jsp">Products</a></h4>
 
       </div>
       <div class="verticalnavele">
         <img style="width: 2.5rem; margin-right: 1rem;" src="img/supermarket.png" alt="" srcset="">
-        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Add Product</a></h4>
+        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="sellerAddProduct.jsp">Add Product</a></h4>
 
       </div>
       <div class="verticalnavele">
         <img style="width: 2.5rem; margin-right: 1rem;" src="img/customer.png" alt="" srcset="">
-        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Customers</a></h4>
-
-      </div>
-      <div class="verticalnavele">
-        <img style="width: 2.5rem;  margin-right: 1rem;" src="img/feedback.png" alt="" srcset="">
-        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Complaints</a></h4>
+        <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="allCustomers.jsp">Customers</a></h4>
 
       </div>
 
     </div>
   </div>
-
   <div style="width:75%; ">
 
     <div style="margin-bottom: 1.5rem; display: flex; justify-content: center;">

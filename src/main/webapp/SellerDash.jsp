@@ -31,26 +31,26 @@
         <div class="verticalnav" >
             <div style="border-top-right-radius: 1.1rem;" class="verticalnavele">
                 <img style="width: 2.5rem; margin-right: 1rem;" src="img/dashboard.png" alt="" srcset="">
-                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Dashboard</a></h4>
+                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="#">Dashboard</a></h4>
             </div>
             <div class="verticalnavele" >
                 <img style="width: 2.5rem;  margin-right: 1rem;" src="img/orders.png" alt="" srcset="">
-                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Orders</a></h4>
+                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="sellerOrder.jsp">Orders</a></h4>
 
             </div>
             <div class="verticalnavele">
                 <img style="width: 2.5rem; margin-right: 1rem;" src="img/product (1).png" alt="" srcset="">
-                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Products</a></h4>
+                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="sellerProduct.jsp">Products</a></h4>
 
             </div>
             <div class="verticalnavele">
                 <img style="width: 2.5rem; margin-right: 1rem;" src="img/supermarket.png" alt="" srcset="">
-                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Add Product</a></h4>
+                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="sellerAddProduct.jsp">Add Product</a></h4>
 
             </div>
             <div class="verticalnavele">
                 <img style="width: 2.5rem; margin-right: 1rem;" src="img/customer.png" alt="" srcset="">
-                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="">Customers</a></h4>
+                <h4 style="font-size: 1.2rem;"><a style="text-decoration: none;" href="allCustomers.jsp">Customers</a></h4>
 
             </div>
 
@@ -66,16 +66,7 @@
         </div>
 
         <div class="brandproduct">
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/income.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Net Income</h2>
 
-                </div>
-                <h1 style="font-size:2.4rem">$1615243</h1>
-
-            </div>
             <div class="analyticbox">
                 <div style="display: flex; margin-bottom: 0.7rem;">
                     <img style="width:2.5rem; margin-right: 1rem;" src="./img/sales.png"
@@ -87,16 +78,6 @@
                 <h1 style="font-size:2.4rem">100</h1>
 
 
-
-            </div>
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/cancel.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Cancel Orders</h2>
-
-                </div>
-                <h1 style="font-size:2.4rem">20</h1>
 
             </div>
 
@@ -121,16 +102,6 @@
                 <h1 style="font-size:2.4rem">200</h1>
 
 
-
-            </div>
-            <div  class="analyticbox">
-                <div style="display: flex; margin-bottom: 0.7rem;">
-                    <img style="width:2.5rem; margin-right: 1rem;" src="./img/complaint.png"
-                         alt="">
-                    <h2 style="font-size:1.8rem">Complaints</h2>
-
-                </div>
-                <h1 style="font-size:2.4rem">30</h1>
 
             </div>
 
