@@ -86,7 +86,7 @@
                             <div class="formlevel">
                                 <img style="width: 2rem; margin-right:1rem ;" src="img/product (2).png" alt="" srcset="">
                                 <label>Name</label>
-                         </div>
+                            </div>
 
                             <input style="color:black;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="name" value="<%=add.getFirstName()+" "+add.getLastName()%>" type="text" class="form-control" placeholder="Enter First Name">
                         </div>
@@ -153,15 +153,15 @@
                         </div>
                     </div>
                     <div style="display: flex; justify-content: space-evenly" class="formsectionbtn">
-                    <input onclick="orderNow()" class="newsectionbtn" style="padding: 0.7rem; margin-bottom:1rem; width: 8rem; " type="button" value="Order Now">
-                        <input class="newsectionbtn" style=" padding: 0.7rem; margin-bottom:1rem; width: 10rem;" type="button" value="Continue Shopping">
+                        <a style="text-decoration: none" href="OrderSuccess.jsp"><input style="width: 7rem; padding: 0.7rem" class="newsectionbtn" type="button" value="Order Now"></a>
+                        <a style="text-decoration: none" href="Product.jsp"><input style="width: 10rem; padding: 0.7rem" class="newsectionbtn" type="button" value="Continue Shopping"></a>
 
                     </div>
                 </form>
                 <%
-                    }
-                    else
-                    {
+                }
+                else
+                {
                 %>
                 <form style="width: 85%;" action="AddressServlet" method="post">
                     <h2 style="font-size: 1.5rem; margin-left:0.5rem; margin-bottom:1rem">Personal Details</h2>
@@ -181,7 +181,7 @@
                     <div class="formrows" >
                         <div style="width: 90%; margin: auto;" class="formcol">
                             <div class="formlevel">
-                                <img style="width: 2rem; margin-right:1rem ;" src="img/product (2).png" alt="" srcset="">
+                                <img style="width: 2rem; margin-right:1rem ;" src="img/user (3).png" alt="" srcset="">
                                 <label>Name</label>
                             </div>
 
@@ -193,7 +193,7 @@
 
                         <div style="width: 90%; margin: auto;" class="formcol">
                             <div class="formlevel">
-                                <img style="width: 2rem; margin-right:1rem ;" src="img/add (1).png" alt="" srcset="">
+                                <img style="width: 2rem; margin-right:1rem ;" src="img/email.png" alt="" srcset="">
                                 <label>Email Address</label>
                             </div>
                             <input style="color:black;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"  name="email_address" type="email" class="form-control" placeholder="Enter Email">
@@ -249,21 +249,9 @@
 
                         </div>
                     </div>
-                    <div style="display: flex; " class="formsectionbtn">
-                        <button  onclick="orderNow()" style="margin:1rem ;" >
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Order Now
-                        </button>
-                        <button onclick="goBack()" style="margin:1rem ;" >
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Go Back
-                        </button>
+                    <div style="display: flex; justify-content: center " class="formsectionbtn">
+                        <a style="text-decoration: none" href="OrderSuccess.jsp"><input style="width: 7rem; padding: 0.7rem" class="newsectionbtn" type="button" value="Order Now"></a>
+                        <a style="text-decoration: none" href="Product.jsp"><input style="width: 10rem; padding: 0.7rem" class="newsectionbtn" type="button" value="Continue Shopping"></a>
                     </div>
                 </form>
                 <%
@@ -278,13 +266,13 @@
         </div>
 
 
-        </div>
+    </div>
 </div>
 
 
 
-            <br>
-            <br>
+<br>
+<br>
 
 <hr>
 <div style="margin-bottom: 4rem; flex-flow: row wrap; justify-content: center;" class="section">
