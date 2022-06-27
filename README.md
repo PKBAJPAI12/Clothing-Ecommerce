@@ -1,6 +1,6 @@
 # Clothing-Ecommerce 
 
-E-commerce (Clothing Ecommerce) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. 
+E-commerce (Clothing Ecommerce) is the buying and selling of cloths, or the transmitting of funds or data, over an electronic network, primarily the internet.
 
 ## Features of Project:
 
