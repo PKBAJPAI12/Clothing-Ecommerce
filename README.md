@@ -1,5 +1,20 @@
 # Clothing-Ecommerce 
 
+E-commerce (Clothing Ecommerce) is the buying and selling of cloths, or the transmitting of funds or data, over an electronic network, primarily the internet.
+
+## Features of Project:
+
+- User can view the Products and create user Account
+- User can filter the Products on the basis of Collection and Category and Price
+- User can Add and Remove Product in Cart
+- User can Add Address for Delivery of Product
+- Checkout and Auto Calculate Cart Price 
+- User can order the Product Online with User Login
+- Seller can create Seller Account with Desired Credentials Required and Auto Generate Seller Id.
+- Seller can Add, Delete and Update the Products
+- Seller can view the own Customers and all products of Seller
+- Seller Dashboard
+
 ## Home Page
 
 ![Screenshot (1041)](https://user-images.githubusercontent.com/82401421/160296862-6ecc1507-321f-45b3-adf9-00da88db6cf4.png)
